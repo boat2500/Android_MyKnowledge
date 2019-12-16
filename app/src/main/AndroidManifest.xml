@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TestRecycleView"></activity>
+        <activity android:name=".layout.GetRetrofit"></activity>
+        <activity android:name=".layout.TestRecycleView" />
         <activity android:name=".RecycleViewAdapter" />
-        <activity android:name=".Liftcycle" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".layout.Liftcycle" />
+        <activity android:name=".layout.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

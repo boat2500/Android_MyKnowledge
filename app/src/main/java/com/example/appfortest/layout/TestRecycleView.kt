@@ -1,4 +1,4 @@
-package com.example.appfortest
+package com.example.appfortest.layout
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,7 +9,6 @@ import com.example.appfortest.data.RecycleViewData
 import kotlinx.android.synthetic.main.activity_test_recycle_view.*
 
 class TestRecycleView : AppCompatActivity() {
-
     var recycleDataTest = ArrayList<RecycleViewData>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +24,7 @@ class TestRecycleView : AppCompatActivity() {
         //ติดต่อหน้า adapter เพื่อนำหน้านั้นมาใส่ใน Recycle view
         TestForShowRecycleView.adapter = MyAdapter(recycleDataTest,this)
         TestForShowRecycleView.layoutManager = LinearLayoutManager(this)
+
     }
     //funtion ที่วน loop เก็บข้อมูล
     private fun addDamyData() {

@@ -1,27 +1,31 @@
-package com.example.appfortest
+package com.example.appfortest.layout
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.appfortest.R
+import com.example.appfortest.adapter.MainPageAdapter
+import com.example.appfortest.data.MainPageData
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    var color = 0
+    var recycleMainData = ArrayList<MainPageData>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.i("25001","Create")
 
-        button3.setOnClickListener(){
-            val intent = Intent(this, Liftcycle::class.java)
-            startActivity(intent)
-        }
 
-        button.setOnClickListener(){
-            startActivity(Intent(this,TestRecycleView::class.java))
-        }
+        recycleMainData.add(MainPageData("Test lift cycle"))
+        recycleMainData.add(MainPageData("Test recycle view"))
+        recycleMainData.add(MainPageData("Test get json by retrofit"))
+
+
+        RecycleMain.adapter = MainPageAdapter(recycleMainData,this)
+        RecycleMain.layoutManager = LinearLayoutManager(this)
     }
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)

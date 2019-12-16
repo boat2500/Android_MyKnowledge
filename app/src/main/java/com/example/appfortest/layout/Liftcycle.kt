@@ -1,7 +1,8 @@
-package com.example.appfortest
+package com.example.appfortest.layout
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.appfortest.R
 import kotlinx.android.synthetic.main.activity_liftcycle.*
 
 class Liftcycle : AppCompatActivity() {

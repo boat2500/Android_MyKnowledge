@@ -2,6 +2,7 @@ package com.example.appfortest.layout
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.appfortest.R
 import kotlinx.android.synthetic.main.activity_liftcycle.*
 
@@ -12,6 +13,7 @@ class Liftcycle : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_liftcycle)
+        supportActionBar?.title = "Lift cycle"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         button2.setOnClickListener(){
@@ -38,6 +40,7 @@ class Liftcycle : AppCompatActivity() {
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         button2.apply {
+            //Log.i("2500",savedInstanceState.getString("button2_text"))
             setText(savedInstanceState.getString("button2_text"))
 
             if (savedInstanceState.getInt("button2_color") == 0) {

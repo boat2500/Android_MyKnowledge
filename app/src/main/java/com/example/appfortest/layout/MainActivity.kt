@@ -16,9 +16,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.i("25001","Create")
-
-
+        supportActionBar?.setTitle("Welcome to my memory")
         recycleMainData.add(MainPageData("Test lift cycle"))
         recycleMainData.add(MainPageData("Test recycle view"))
         recycleMainData.add(MainPageData("Test get json by retrofit"))

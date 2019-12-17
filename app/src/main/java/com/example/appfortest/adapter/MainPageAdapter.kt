@@ -10,6 +10,7 @@ import com.example.appfortest.layout.MainActivity
 import com.example.appfortest.R
 import com.example.appfortest.layout.TestRecycleView
 import com.example.appfortest.data.MainPageData
+import com.example.appfortest.layout.GetRetrofit
 import kotlinx.android.synthetic.main.show_manu_on_main_page.view.*
 
 class MainPageAdapter(var item:ArrayList<MainPageData>, var context: MainActivity): RecyclerView.Adapter<ViewHolder_Main>() {
@@ -28,10 +29,12 @@ class MainPageAdapter(var item:ArrayList<MainPageData>, var context: MainActivit
         holder.manu.setOnClickListener(){
             if (item[position].detail == "Test lift cycle"){
                 it.context.startActivity(Intent(context, Liftcycle::class.java))
-
-            }else if (item[position].detail == "Test recycle view"){
-                it.context.startActivity(Intent(context,
-                    TestRecycleView::class.java))
+            }
+            else if (item[position].detail == "Test recycle view"){
+                it.context.startActivity(Intent(context, TestRecycleView::class.java))
+            }
+            else if (item[position].detail == "Test get json by retrofit"){
+                it.context.startActivity(Intent(context, GetRetrofit::class.java))
             }
         }
     }

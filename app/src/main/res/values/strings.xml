@@ -2,4 +2,6 @@
     <string name="app_name">App for test</string>
     <string name="true1">True</string>
     <string name="false1">False</string>
+    <string name="follow">Follow</string>
+    <string name="unfollow">Unfollw</string>
 </resources>

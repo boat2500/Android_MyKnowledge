@@ -15,6 +15,7 @@ class TestRecycleView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_recycle_view)
 
+        supportActionBar?.title = "Recycle view"
         //ใส่ปุ่มย้อนกลับใน action bar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 

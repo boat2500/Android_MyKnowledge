@@ -1,5 +1,6 @@
 package com.example.appfortest.layout
 
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -8,10 +9,10 @@ import com.example.appfortest.R
 import com.example.appfortest.adapter.MainPageAdapter
 import com.example.appfortest.data.MainPageData
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.concurrent.locks.Lock
 
 class MainActivity : AppCompatActivity() {
     var recycleMainData = ArrayList<MainPageData>()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         recycleMainData.add(MainPageData("Test lift cycle"))
         recycleMainData.add(MainPageData("Test recycle view"))
         recycleMainData.add(MainPageData("Test get json by retrofit"))
+        recycleMainData.add(MainPageData("Monter hunter"))
 
 
         RecycleMain.adapter = MainPageAdapter(recycleMainData,this)

@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".layout.Profile"></activity>
+        <activity android:name=".income.incomeActivity"></activity>
+        <activity android:name=".layout.Hunter" />
+        <activity android:name=".layout.Profile" />
         <activity android:name=".layout.GetRetrofit" />
         <activity android:name=".layout.TestRecycleView" />
         <activity android:name=".layout.Liftcycle" />
